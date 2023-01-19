@@ -28,22 +28,15 @@ I am suggesting the "way we've always done it" on technical designs is **not the
 ### How about a peek at some source code?
 
 ```C#
-  public enum AchImportFormatType
-    {
-        None = 0,
-        [Description("CSV")]
-        Csv,
-        [Description("Fixed")]
-        Fixed,
-        [Description("Tab")]
-        TabDelimited,
-        [Description("Space")]
-        SpaceDelimited,
-        [Description("Binary")]
-        Binary,
-        [Description("NACHA")]
-        NACHA
-    }
+        /// <summary>
+        ///     Initializes the tests.
+        /// </summary>
+        [TestInitialize]
+        public void TestInitialize()
+        {
+            this.mockAccess ??= new CreateAchTemplateAccess(contextProvider,
+                this.ContextOptions);
+        }
 ```
 
 ### Example sequence diagram
