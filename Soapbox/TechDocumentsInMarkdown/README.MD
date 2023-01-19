@@ -16,16 +16,21 @@ I am suggesting the "way we've always done it" on technical designs is **not the
 
 ### Reasons why my recommendation is not radical
 
-- I am recommending we use the **native default** documenting language used on Github. 
+- I am recommending we use the **native default documenting language used on Github**.
 - Literally thousands of sites use the same methodology.
 - The approach is **well documented**.
 - Mermaid documents are supported **inline**, not copy/pasted from some other crazy source.
-- Code snippets are supported with automatic syntax hightlighting for a variety of languages incliding C#, SQL, JSON. 
-- It can live in the same place where our source code lives.  Imagine that!
+- Code snippets are supported with automatic syntax hightlighting for a variety of languages incliding C#, SQL, JSON.
+- Technical requirements can live in the same place where our source code lives.  Imagine that!
+- Easy to include screen shots and **all** artifacts used.
+- Easy to reference source code artifacts with links.
+- Easy to create a PDF from the content with all graphics rendered.
 - I can have my entire technical document in ONE FILE instead of having to search all over Sharepoint for the supporting sequence diagram source code.
-- Mermaid support is **current**.  
+- Mermaid support is **current**.
 
-### How about a peek at some source code?
+### Samples of tech content rendered inline
+
+##### How about a peek at some source code?
 
 ```C#
         /// <summary>
@@ -39,7 +44,7 @@ I am suggesting the "way we've always done it" on technical designs is **not the
         }
 ```
 
-### Example sequence diagram
+##### Example sequence diagram
 
 ```mermaid
 sequenceDiagram
