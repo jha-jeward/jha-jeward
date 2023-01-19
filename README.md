@@ -38,7 +38,7 @@ You can click the Preview link to take a look at your changes.
 
 ##### Sequence Diagram for the controller GET operation
 
-```Mermaid
+```mermaid
 sequenceDiagram
     actor Caller as Banno
     participant Int as Interceptors
