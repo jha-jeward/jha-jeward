@@ -4,20 +4,20 @@ I am suggesting the "way we've always done it" on technical designs is **not the
 
 ### Things that are wrong with the current methodology
 
-| Name            | Description
-|---------------|------------------------------|
-| Sharepoint mermaid support is downlevel | You've spent all this time creating a class diagram in the online editor only to find when you save it, Sharepoint can't render it.  The only way you can copy/paste your image is from the mermaid live editor online.
-| One diagram only?? | You look at the previous projects before you.  They have precisely one diagram per project, but to adequately document your intended work, you need at least 8-10.  What do you do?  Create numbered different diagrams?  Then reference them in the bottom of the Word document?
-| Sharepoint path changes | Okay, now for eons you've been creating this table at the bottom of your Word document to cross-reference your sequence diagrams, and bango-whammo, the Sharepoint admin makes some URL changes and blows up all those links.
-| Change control supported? | Supposedly, Sharepoint is supporting change control on your Word document and you could roll-back to a previous version, but I don't know how to do this?  Do you?  Is it worth the pain?  Would the net change be recognizable?  Or full of funky weird XML stuff?
-| No unison with source code | There is no linkage whatsoever between source code in the repository and the documentation that drives changes to that repository.  How could an auditor or anyone else ever unit the two?  Nightmare.
-| Freaky properties in word documents | Okay, you changed all the visible text, but somehow the previous author of the document you copied is still in there.  Where is it?  How do you change it?
-| Style nightmares | All your're trying to do is add another line to a table, but for some reason, Word styles your new rows totally different than the previous ones.  WHY???  We don't know.  We just hates it Gollum, we hates it.
+| Name                                         | Description
+|----------------------------------------------|------------------------------------------
+| Organization of intellectual property        | For many reasons, it is preferred that the intellectual property that contributed to the development of the system stay with the system rather than risk being orphaned or misapplied to the wrong system.  How many places do we want to spread this to?  Let's decrease the count.
+| Point-in-time synchronization                | Because the current documents are not united with the code repositories, it is hard to answer the question, "what were the requirements when this was implemented?  How did they change later?"  Uniting them in the same source control system makes this much easier.
+| Auditing of requirements                     | For compliance reasons, we should be able to audit changes in requirements with the same precision we can audit source code changes.  
+| Changes more discernable                     | Net changes made to Word files are difficult to understand with a nasty mess of XML.  Markdown changes are plain-text.
+| Freaky properties in word documents          | Okay, you changed all the visible text, but somehow the previous author of the document you copied is still in there.  Where is it?  How do you change it?
+| Style nightmares                             | All your're trying to do is add another line to a table, but for some reason, Word styles your new rows totally different than the previous ones.  WHY???  We don't know.  We just hates it Gollum, we hates it.
+| Assembly from multiple sources               | You shouldn't have to wonder, "did I grab a screenshot from that diagram I saved over yonder?  Are we in sync?"
 
 ### Reasons why my recommendation is not radical
 
 - I am recommending we use the **native default documenting language used on Github**.
-- Literally thousands of sites use the same methodology.
+- The whole world already uses it.  Literally thousands of sites all across Github and other providers use this technique.
 - The approach is **well documented**.
 - Mermaid documents are supported **inline**, not copy/pasted from some other crazy source.
 - Code snippets are supported with automatic syntax hightlighting for a variety of languages incliding C#, SQL, JSON.
@@ -27,21 +27,24 @@ I am suggesting the "way we've always done it" on technical designs is **not the
 - Easy to create a PDF from the content with all graphics rendered.
 - I can have my entire technical document in ONE FILE instead of having to search all over Sharepoint for the supporting sequence diagram source code.
 - Mermaid support is **current**.
+- You can browse to your documentation in the gibhub repo and the content renders without any special tools.
 
 ### Samples of tech content rendered inline
 
 ##### How about a peek at some source code?
 
+Notice the syntax highlighting that we see in the code snippet below.
+
 ```C#
-        /// <summary>
-        ///     Initializes the tests.
-        /// </summary>
-        [TestInitialize]
-        public void TestInitialize()
-        {
-            this.mockAccess ??= new CreateAchTemplateAccess(contextProvider,
-                this.ContextOptions);
-        }
+/// <summary>
+///     Initializes the tests.
+/// </summary>
+[TestInitialize]
+public void TestInitialize()
+{
+    this.mockAccess ??= new CreateAchTemplateAccess(contextProvider,
+        this.ContextOptions);
+}
 ```
 
 ##### Example sequence diagram
@@ -64,3 +67,9 @@ sequenceDiagram
     end
     C ->> Caller : GetAchImportResponse (success)
 ```
+
+##### Company logo?
+
+How about the one from the JHA site with that fancy new blue dot?
+
+![Logo2](https://www.jackhenry.com/hubfs/jhw-01/branding/jack-henry-logo.svg)
