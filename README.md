@@ -1,58 +1,19 @@
-- 👋 Hi, I’m @jha-jeward
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+# Jeff Ward
 
-Personal repository for experimental projects.
+- Professional Info
+  - Senior Software Enginneer, BSL
+  - Formerly with EPS2 Profitstars Payments
+  - Started with Goldleaf in 2003.
+- External interests
+  - Music
+  - Crypto
+- Family
+  - Grampa to 8, 9th on the way
+  - Wife Carol
+  - Smyrna, TN near Nashville
 
-<!---
-jha-jeward/jha-jeward is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+### Soapbox
 
-```C#
-  public enum AchImportFormatType
-    {
-        None = 0,
-        
-        [Description("CSV")]
-        Csv,
-        
-        [Description("Fixed")]
-        Fixed,
-        
-        [Description("Tab")]
-        TabDelimited,
-        
-        [Description("Space")]
-        SpaceDelimited,
-        
-        [Description("Binary")]
-        Binary,
-        
-        [Description("NACHA")]
-        NACHA
-    }
-```
+This is links to articles where I throw a little opinion out there.
 
-##### Sequence Diagram for the controller GET operation
-
-```mermaid
-sequenceDiagram
-    actor Caller as Banno
-    participant Int as Interceptors
-    participant C as GetAchImportFormatController
-    participant A as GetAchImportFormatAction
-    Caller ->> Int : GetAchImportFormatRequest
-    break when invalid input is received
-        Int --> Caller : Return GetAchImportFormatResponse (failure) 
-    end
-    Int ->> C : GetAchImportFormatRequest
-    C ->> A : GetAchImportFormatRequest
-    break when error occurs or success = false
-        A ->> C : Return GetAchImportFormatResponse (failure) 
-        C ->> Caller : Return GetAchImportFormatResponse (failure) 
-    end
-    C ->> Caller : GetAchImportResponse (success)
-```
+[Should techical documents be authored in markdown?](Soapbox/TechDocumentsInMarkdown/README.MD)
