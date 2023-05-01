@@ -1,5 +1,11 @@
 # JHA Technical documents in markdown?
 
+## Update: This crusade was a success
+
+Markdown is now the departmental standard.  Leaving this post for posterity.
+
+See [Authoring Technical Designs in Markdown](https://github.com/Banno/digital-is-jha-wiki/blob/main/Standards-%26-Templates/Tech-Design-using-Markdown.md)
+
 I am suggesting the "way we've always done it" on technical designs is **not the best way** for Jack Henry.  I'm suggesting there is an alternative that offers many upsides with almost zero downsides.  I'm going to make my case here.
 
 ### Things that are wrong with the current methodology

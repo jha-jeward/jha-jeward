@@ -6,11 +6,11 @@
   - Started with Goldleaf in 2003.
 - External interests
   - Music
-  - Crypto
+  - Cryptocurrency/Blockchain
 - Family
-  - Grampa to 8, 9th on the way
+  - Grampa to 9 wonderful grandchildren.
   - Wife Carol
-  - Smyrna, TN near Nashville
+  - Hometown Smyrna TN near Nashville
 
 ### Soapbox
 
