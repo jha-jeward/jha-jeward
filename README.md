@@ -11,9 +11,3 @@
   - Grampa to 9 wonderful grandchildren.
   - Wife Carol
   - Hometown Smyrna TN near Nashville
-
-### Soapbox
-
-This is links to articles where I throw a little opinion out there.
-
-[Should techical documents be authored in markdown?](Soapbox/TechDocumentsInMarkdown/README.MD)
